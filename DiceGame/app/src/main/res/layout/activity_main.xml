@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.michael.dicegame.MainActivity"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Total Score:"
+        android:id="@+id/userScoreId"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/userNumberId"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/userScoreId"
+        android:layout_marginLeft="20px"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Total Score: "
+        android:id="@+id/computerScoreId"
+        android:textSize="20dp"
+        android:layout_below="@+id/userTurnNumId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/computerNumberId"
+        android:textSize="20dp"
+        android:layout_below="@+id/userTurnScoreId"
+        android:layout_toRightOf="@+id/computerScoreId"
+        android:layout_toEndOf="@+id/computerScoreId"
+        android:layout_marginTop="20px"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/diceImageViewId"
+        android:src="@drawable/dice1"
+        android:layout_below="@+id/computerTurnScoreId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        android:id="@+id/rollButtonId"
+        android:layout_alignTop="@+id/holdButtonId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="220px"
+        android:layout_height="wrap_content"
+        android:text="Hold"
+        android:id="@+id/holdButtonId"
+        android:layout_alignTop="@+id/resetButtonId"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButtonId"
+        android:layout_marginTop="97dp"
+        android:layout_below="@+id/diceImageViewId"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Turn Score:"
+        android:id="@+id/userTurnScoreId"
+        android:layout_below="@+id/userScoreId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Turn Score:"
+        android:id="@+id/computerTurnScoreId"
+        android:layout_below="@+id/computerScoreId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/userTurnNumId"
+        android:textSize="17dp"
+        android:layout_above="@+id/computerNumberId"
+        android:layout_toRightOf="@+id/userTurnScoreId"
+        android:layout_marginLeft="17px"
+        android:layout_toEndOf="@+id/userTurnScoreId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/computerTurnNumId"
+        android:textSize="17dp"
+        android:layout_below="@+id/computerScoreId"
+        android:layout_toRightOf="@+id/userNumberId"
+        android:layout_toEndOf="@+id/userNumberId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOUR TURN!"
+        android:id="@+id/titleViewId"
+        android:layout_marginTop="33dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/computerTurnScoreId"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageViewId"
+        android:layout_marginBottom="33dp"
+        android:textSize="20dp"
+        android:layout_above="@+id/holdButtonId"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+</RelativeLayout>
